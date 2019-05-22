@@ -1,18 +1,30 @@
-<h1><%= @cocktail.name %></h1>
-<p><% @cocktail.doses.each do |dose| %></p>
-<p><%= dose.description %> <%= dose.ingredient.name %></p>
-<p><%= link_to "Delete this dose", dose_path(dose),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %><p>
-<% end %>
- <hr>
-<%= link_to "Complete the recipe", new_cocktail_dose_path(@cocktail) %>
-
-
-
-<br><hr>
-<%= link_to "View all cocktails", cocktails_path %>
-
-
-
+<div class="body-show">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card-cocktail">
+          <h2 style="text-align:center; margin-bottom: 10px"><%= @cocktail.name %></h2>
+          <div class="card-infos">
+            <div class="card-infos-img" style="background-image: url(https://source.unsplash.com/random);"></div>
+            <div class="card-infos-details">
+              <% @cocktail.doses.each do |dose| %>
+                <div class="dose-detail">
+                  <%= dose.description %>
+                  <%= dose.ingredient.name %>
+                  <%= link_to "delete", dose_path(dose),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" }, class: "btn btn-primary mt-10"  %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="card-btn">
+            <%= link_to "Complete the recipe", new_cocktail_dose_path(@cocktail), class: "btn btn-primary mt-10" %>
+            <%= link_to "View all cocktails", cocktails_path, class: "btn btn-outline-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 

@@ -6,13 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+      <%= link_to root_path, class: "navbar-brand custom-title" do %>
+        <%= image_tag "logo.png", alt: "OpenBar", width: 40 %>Cocktailator
+      <% end %>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Looking for a cocktail ?</button>
+  </form>
+</nav>
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <%= javascript_pack_tag "application" %>
   </body>
 </html>
+
+  <%#= link_to "View all cocktails", cocktails_path, class: "btn btn-outline-primary" %>
+  <!-- <a style="font-family: Poppins; font-size: 24px" class="navbar-brand"> -->

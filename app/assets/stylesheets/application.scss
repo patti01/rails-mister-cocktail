@@ -1,6 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Poppins:400,500,600,700&display=swap');
 @import "bootstrap/scss/bootstrap";
 @import "./components/index";
+@import "cocktails.scss";
 
-body {
-  font-family: Helvetica;
+
+h1 {
+  font-family: Poppins, 'sans-serif';
+  font-weight: 700;
+  font-size: 50px;
 }
+
+h2 {
+  text-align: center;
+  font-family: Poppins, 'sans-serif';
+  font-weight: 500;
+  font-size: 40px;
+}
+
+h3 {
+  font-family: Poppins, 'sans-serif';
+  font-weight: 400;
+  font-size: 24px;
+}
+
+p {
+  font-family: Cabin, 'sans-serif';
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.btn-primary:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.btn-outline-primary {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.btn-outline-primary:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.body-show {
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(https://images.unsplash.com/photo-1468072114808-903e572b8ead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80);
+  background-size: cover !important;
+  height: 100vh;
+}
+
+.card-cocktail {
+  width: 900px; /* limit card width */
+  margin: 50px auto; /* center card in container */
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+  padding: 36px;
+}
+
+.card-infos {
+  display: flex;
+}
+
+.card-infos-img {
+  padding: 16px;
+  width: 50%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-infos-details {
+  padding-left: 16px;
+  display: flex; /* another flex */
+  flex-direction: column;
+  width: 50%;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 16px 0;
+}
+
+.card-btn {
+  text-align: center;
+}
+
+
+.dose-detail {
+  display: flex;
+  align-items: center;
+  justify-content : space-between;
+}
+
+.custom-title {
+  font-family: Poppins;
+  font-size: 24px;
+}
+
+.footer {
+background: #F4F4F4;
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 100px;
+padding: 0px 50px;
+color: rgba(0,0,0,0.3);
+}
+.footer-links {
+display: flex;
+align-items: center;
+}
+.footer-links a {
+color: black;
+opacity: 0.15;
+text-decoration: none;
+font-size: 24px;
+padding: 0px 10px;
+}
+.footer-links a:hover {
+opacity: 1;
+}
+.footer .fa-heart {
+color: #D23333;
+}
+

@@ -1,7 +1,4 @@
-<div class="container mt-5">
- <%= simple_form_for(cocktail) do |f| %>
+ <%= simple_form_for(cocktail, :html => {:class => 'form-inline' }) do |f| %>
    <%= f.input :name %>
-
    <%= f.submit class: 'btn btn-primary' %>
  <% end %>
-</div>

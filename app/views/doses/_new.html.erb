@@ -9,7 +9,7 @@
           <h3>Add a new recipe</h3>
           <%= simple_form_for [@cocktail, @dose] do |f| %>
            <%= f.input :description %>
-           <%= f.association :ingredient, collection: Ingredient.all, prompt: "Choose an ingredient"
+           <%= f.association :ingredient, collection: Ingredient.all, input_html: { class: "select2" }
            %>
            <%= f.submit "add a cocktail recipe", class: "btn btn-primary" %>
           <% end %>

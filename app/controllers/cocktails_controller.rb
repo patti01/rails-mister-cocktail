@@ -2,11 +2,17 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show]
 
   def index
-    @cocktails = Cocktail.all
+    if params[:name].blank?
+      @cocktails = Cocktail.all
+    else
+    @name = params[:name]
+    @cocktails = Cocktail.all.select { |cocktail| cocktail[:name].downcase == @name.downcase }
+    end
   end
 
   def show
     @dose = Dose.new
+    @review = Review.new
   end
 
   def new

@@ -5,7 +5,7 @@
         <div class="card-cocktail">
           <h2 style="text-align:center; margin-bottom: 10px"><%= @cocktail.name %></h2>
           <div class="card-infos">
-            <div class="card-infos-img" style="background-image: url(https://source.unsplash.com/random);"></div>
+            <div class="card-infos-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>)"> </div>
             <div class="card-infos-details">
               <% @cocktail.doses.each do |dose| %>
                 <div class="dose-detail">

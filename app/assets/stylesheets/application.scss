@@ -47,7 +47,6 @@ p {
   color: white;
   border: 1px solid black;
   border-radius: 15px;
-  margin: 10px;
 }
 
 .btn-outline-primary:hover {
@@ -65,7 +64,7 @@ p {
 .card-cocktail {
   width: 900px; /* limit card width */
   margin: 50px auto; /* center card in container */
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
   padding: 36px;
@@ -103,6 +102,9 @@ p {
   text-align: center;
 }
 
+.container {
+  padding-top: 100px;
+}
 
 .dose-detail {
   display: flex;
